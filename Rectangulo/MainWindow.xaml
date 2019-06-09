@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions> <!--Definicion de Columnas-->
+        <StackPanel Grid.Column="0">
+            <Label Content="H1=" FontSize="30" Margin="20,20,121,20"/>
+            <Label Content="H2=" FontSize="30" Margin="20,20,121,20"/>
+            <Label Content="B1=" FontSize="30" Margin="20,20,121,20"/>
+            <Label Content="B2=" FontSize="30" Margin="20,20,121,20"/>
+        </StackPanel><!-- Labels-->
+        <StackPanel Grid.Column="0">
+            <TextBox  Margin="90,40,20,0"  Text="{Binding Path=x1, Mode=TwoWay}"  />
+            <TextBox  Margin="90,70,20,0" Text="{Binding Path=x2, Mode=TwoWay}"   />
+            <TextBox  Margin="90,75,20,0"  Text="{Binding Path=y1, Mode=TwoWay}"   />
+            <TextBox  Margin="90,70,20,0 "  Text="{Binding Path=y2, Mode=TwoWay}"  />
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Area:" FontSize="20" Margin="70 50 460 25"/>
+            <Label Content="Distancia:" FontSize="20" Margin="70 50 415 25"/>
+            <Label Content="Perimetro:" FontSize="20" Margin="70 50 415 25"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" >
+            <TextBox  Margin="130,60,320,3"  Text="{Binding Path=area, Mode=TwoWay}" />
+            <TextBox  Margin="170,95,300,3" Text="{Binding Path=distancia, Mode=TwoWay}"  />
+            <TextBox  Margin="170,90,300,3"  Text="{Binding Path=perimetro, Mode=TwoWay}" />
+        </StackPanel>
     </Grid>
+    
 </Window>
